@@ -8,14 +8,14 @@ import java.util.List;
 
 public class TestDataBuild {
 
-    public AddPlace addPlacePayload(){
+    public AddPlace addPlacePayload(String name, String language, String address){
         AddPlace p = new AddPlace();
         p.setAccuracy(47);
-        p.setName("Assam coffee shop");
+        p.setName(name);
         p.setPhone_number("(+91)983 893 393");
-        p.setAddress("23 Liang St");
+        p.setAddress(address);
         p.setWebsite("https://assamshop.com");
-        p.setLanguage("Hindi");
+        p.setLanguage(language);
         List<String> myList = new ArrayList<>();
         myList.add("Shoe park");
         myList.add("Shop land");
@@ -25,5 +25,14 @@ public class TestDataBuild {
         l.setLng(-67.87466);
         p.setLocation(l);
         return p;
+    }
+
+    public String DeletePlacePayload(String place_id){
+//        DeletePlace delPlace = new DeletePlace();
+//        delPlace.setPlace_id(place_id);
+//        return delPlace;
+        return "{\n    \"place_id\": \""+place_id+"\"\n}";
+
+
     }
 }
