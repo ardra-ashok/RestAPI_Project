@@ -15,7 +15,8 @@ import resources.Utils;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 
 public class StepDefinition extends Utils {
 

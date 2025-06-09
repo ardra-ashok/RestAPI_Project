@@ -19,7 +19,7 @@ public class Utils {
     public RequestSpecification requestSpecification() throws IOException {
 
         if (req==null) {
-            PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
+            PrintStream log = new PrintStream(new FileOutputStream("target/logging.txt"));
             req = new RequestSpecBuilder().setBaseUri(getGlobalValue("baseUrl")).addQueryParam("key", "qaclick123")
                     .addFilter(RequestLoggingFilter.logRequestTo(log))
                     .addFilter(ResponseLoggingFilter.logResponseTo(log))
